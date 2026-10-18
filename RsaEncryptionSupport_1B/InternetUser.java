@@ -33,7 +33,7 @@ public class InternetUser {
     public boolean setName(String name) {
         if (name == null) throw new NullPointerException("name cannot be null");
         if (name.length() < MIN_NAME_LENGTH || name.length() > MAX_NAME_LENGTH) return false;
-        this.name = name;~
+        this.name = name;
         return true;
     }
 
