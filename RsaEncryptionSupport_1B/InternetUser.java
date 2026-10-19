@@ -1,3 +1,6 @@
+/**
+ * Represents a user identified by a name and an IP address.
+ */
 public class InternetUser {
     private static final int MAX_NAME_LENGTH = 50;
     private static final int MIN_NAME_LENGTH = 2;
@@ -9,11 +12,21 @@ public class InternetUser {
     private String name;
     private String ip;
 
+    /**
+     * Creates an InternetUser with the default name and IP address.
+     */
     public InternetUser() {
         this.name = DEFAULT_NAME;
         this.ip = DEFAULT_IP;
     }
 
+    /**
+     * Creates an InternetUser with the given name and IP address.
+     *
+     * @param name the user's name
+     * @param ip the user's IP address
+     * @throws NullPointerException if name or ip is null
+     */
     public InternetUser(String name, String ip) {
         if (name == null || ip == null) throw new NullPointerException("name and ip cannot be null");
         this.name = DEFAULT_NAME;
